@@ -1,4 +1,3 @@
-65
 a = float(input("Nhập độ dài cạnh a: "))
 b = float(input("Nhập độ dài cạnh b: "))
 c = float(input("Nhập độ dài cạnh c: "))
