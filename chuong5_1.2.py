@@ -1,4 +1,3 @@
-55
 x = 10
 y = 5
 print("Tổng x+y =", x+y)
