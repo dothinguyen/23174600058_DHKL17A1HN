@@ -1,8 +1,19 @@
-Python 3.11.6 (tags/v3.11.6:8b6ee5b, Oct  2 2023, 14:57:12) [MSC v.1935 64 bit (AMD64)] on win32
-Type "help", "copyright", "credits" or "license()" for more information.
->>> 0
-0
->>> x = int(input("Nhập vào một số x: "))
-Nhập vào một số x: 4
->>> print(f"{x} là số nguyên tố." if all(x % i != 0 for i in range(2, int(x/2)+1)) and x >= 2 else f"{x} không phải là số nguyên tố.")
-4 không phải là số nguyên tố.
+def is_prime(x):
+    if x <= 1:
+        return False
+    if x <= 3:
+        return True
+    if x % 2 == 0 or x % 3 == 0:
+        return False
+    i = 5
+    while i * i <= x:
+        if x % i == 0 or x % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+x = int(input("Nhập số x: "))
+
+if is_prime(x):
+    print(x, "là số nguyên tố")
+else:
+    print(x, "không là số nguyên tố")
