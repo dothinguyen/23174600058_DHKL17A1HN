@@ -1,64 +1,33 @@
-room_type = int(input("Nhập mã loại phòng (1-8): "))
-num_nights = int(input("Nhập số đêm lưu trú: "))
-
-if room_type == 1:
-    if num_nights <= 1:
-        total_cost = 1260000
-    elif num_nights <= 3:
-        total_cost = 1260000 * 0.75 * num_nights
-    else:
-        total_cost = 1260000 * 0.7 * num_nights
-elif room_type == 2:
-    if num_nights <= 1:
-        total_cost = 1550000
-    elif num_nights <= 3:
-        total_cost = 1550000 * 0.75 * num_nights
-    else:
-        total_cost = 1550000 * 0.7 * num_nights
-elif room_type == 3:
-    if num_nights <= 1:
-        total_cost = 1830000
-    elif num_nights <= 3:
-        total_cost = 1830000 * 0.75 * num_nights
-    else:
-        total_cost = 1830000 * 0.7 * num_nights
-elif room_type == 4:
-    if num_nights <= 1:
-        total_cost = 1830000
-    elif num_nights <= 3:
-        total_cost = 1830000 * 0.75 * num_nights
-    else:
-        total_cost = 1830000 * 0.7 * num_nights
-elif room_type == 5:
-    if num_nights <= 1:
-        total_cost = 2120000
-    elif num_nights <= 3:
-        total_cost = 2120000 * 0.75 * num_nights
-    else:
-        total_cost = 2120000 * 0.7 * num_nights
-elif room_type == 6:
-    if num_nights <= 1:
-        total_cost = 2120000
-    elif num_nights <= 3:
-        total_cost = 2120000 * 0.75 * num_nights
-    else:
-        total_cost = 2120000 * 0.7 * num_nights
-elif room_type == 7:
-    if num_nights <= 1:
-        total_cost = 2540000
-    elif num_nights <= 3:
-        total_cost = 2540000 * 0.75 * num_nights
-    else:
-        total_cost = 2540000 * 0.7 * num_nights
-elif room_type == 8:
-    if num_nights <= 1:
-        total_cost = 4800000
-    elif num_nights <= 3:
-        total_cost = 4800000 * 0.75 * num_nights
-    else:
-        total_cost = 4800000 * 0.7 * num_nights
+print("Cac loai ma phong:")
+print("1-Standard")
+print("2-Superior Garden View")
+print("3-Superior Ocean View")
+print("4-Garden View Bungalow")
+print("5-Pool View Bungalow")
+print("6-Family Room")
+print("7-Beach Front Bungalow")
+print("8-VIP sea View")
+a=eval(input("Nhap loai ma phong:"))
+b=eval(input("Nhap so dem:"))
+if a>0 & a<=8:
+    if a==1: c=1260000
+    elif a==2: c=1550000
+    elif a==3: c=1830000
+    elif a==4: c=1830000
+    elif a==5: c=2120000
+    elif a==6: c=2120000
+    elif a==7: c=2540000
+    elif a==8: c=4800000
+    else: 
+        print("Vui long chon lai ma phong.")
+else: print("Vui long chon lai ma phong.") 
+if b==1:
+    print("Gia tien phong la:",c,"dong.")
+elif b==2:
+    print("Gia tien phong la:",c*b*0.75,"dong.") 
+elif b==3:
+    print("Gia tien phong la:",c*b*0.75,"dong.") 
+elif b>=4:
+    print("Gia tien phong la:",c*b*0.7,"dong.")       
 else:
-    print("Mã loại phòng không hợp lệ")
-    total_cost = 0
-
-print("Tiền thuê phòng là:", total_cost, "VNĐ")
+    print("Vui long nhap lai so dem.")
