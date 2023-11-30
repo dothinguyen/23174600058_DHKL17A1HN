@@ -1,8 +1,5 @@
-n = int(input("Nhập số lượng số: "))
-
-numbers = list(range(1, n+1))
-reversed_numbers = numbers[::-1]
-odd_numbers = [num for num in reversed_numbers if num % 2 != 0]
-
-print("Dãy số đảo ngược chỉ gồm các số lẻ là:", odd_numbers)
-
+n = int(input("Nhập n lần số tùy ý:"))
+for i in range(n):
+    t = int(input(f"Nhập số thứ {i+1}:"))
+    for x in range(t,0,-2):
+        print(x)
