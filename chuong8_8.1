@@ -1,15 +1,12 @@
-Python 3.11.6 (tags/v3.11.6:8b6ee5b, Oct  2 2023, 14:57:12) [MSC v.1935 64 bit (AMD64)] on win32
-Type "help", "copyright", "credits" or "license()" for more information.
->>> 0
-0
->>> numbers = [int(input(f"Nhập {char}: ")) for char in ["a", "b", "c", "d"]]
-Nhập a: 24
-Nhập b: 12
-Nhập c: 3
-Nhập d: 11
->>> max_number = max(numbers)
->>> min_number = min(numbers)
->>> print("Max= ", max_number)
-Max=  24
->>> print("Min = ", min_number)
-Min =  3
+a,b,c,d=eval(input("Nhap a, b, c, d:"))
+print("a, b, c, d=", a,b,c,d)
+max = a
+min = a
+if max < b: max = b
+if max < c: max = c
+if max < d: max = d
+if min > b: min = b
+if min > c: min = c
+if min > d: min = d
+print("Max=", max)
+print("Min=", min)
